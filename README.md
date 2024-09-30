@@ -1,2 +1,2 @@
 # Mobula-tags
-Code to display tagging data.
+Code to display mobula ray tag depth data.
