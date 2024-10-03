@@ -26,7 +26,7 @@ library(lutz)#use to determine time zone based on lat/long
 
 ##Read in data.
 ```{r}
-Depths_234812 <-read.csv(file="C:/R stuff/Tag_depths/234812-Series.csv", header=TRUE, sep=",")
+Depths_234812 <-read.csv(file="C:/R_git_stuff/Mobula-tag-depths-E-hemisphere/234812-Series.csv", header=TRUE, sep=",")
 
 #head(Depths_234812)
 #glimpse(Depths_234812)
@@ -47,7 +47,7 @@ Depths_234812$datetime = dmy_hms(paste(Depths_234812$Day,Depths_234812$Time))
 ###3) Look up time zone based on popoff lat/long for tag of interest and add to data frame with popoff lat/long.
 ###4) Join the depth data frame and popoff location and time zone data frame.
 ```{r}
-Popoff_loc <-read.csv(file="C:/R stuff/Tag_depths/Mobula_locations_July_29_2024.csv", header=TRUE, sep=",")
+Popoff_loc <-read.csv(file="C:/R_git_stuff/Mobula-tag-depths-E-hemisphere/Mobula_locations.csv", header=TRUE, sep=",")
 
 Popoff_loc_234812 <- Popoff_loc %>% 
   filter(Ptt == 234812) %>%
@@ -93,7 +93,7 @@ Depths_234812$Popoff_datetime[na_rows]
 ####4)Run the function in the .R file (brett_depth_plot_good_label() and change inputs. Note if run code in console then will go to plots and can export there otherwise will need to run with ggsave to export.
 
 ```{r}
-source("Brett_lineplot_Aug22_2024.R")
+source("Tag depth line plots.R")
 ```
 
 #date/times in line plot seem accurate when I compare to depth file after converting to HI time.
@@ -131,7 +131,7 @@ ggsave("234812_lineplot.jpg")
 
 ##Bret Cooper code
 ```{r}
-source("brett_boxplots_Aug22_2024.R")
+source("Tag depth boxplot.R")
 ```
 
 
