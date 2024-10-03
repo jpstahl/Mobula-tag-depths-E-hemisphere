@@ -120,7 +120,7 @@ brett_depth_plot_good_label_yaxis_812 <- function(depth_df, Popoff_datetime,
     scale_x_datetime(date_breaks = "6 hours", date_labels = "%H") +
     theme_bw() +
     xlab("Date (Tag Popoff TZ)") + 
-    annotate(geom = "text", x = midday_time, y = ylims[1], vjust = 4, label = dates, size = 3) +
+    annotate(geom = "text", x = midday_time, y = ylims[1], vjust = 4.75, label = dates, size = 3) +
     #annotate(geom = "text", x = mean(depth_df$Popoff_datetime, na.rm = T), y = max_depth * 1.66, label = x_label, size = 4.5) +
     #annotate(geom = "text", x = midday_time, y = 0, vjust = 30, label = dates, size = 3) + #need to figure out how to get this to show up below chart
     annotate(geom = "text", x = mean(depth_df$Popoff_datetime, na.rm = T), y = ylims[1], vjust = 5, label = x_label, size = 4.5) +
