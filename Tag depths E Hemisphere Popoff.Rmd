@@ -87,8 +87,8 @@ Depths_234812$Popoff_datetime[na_rows]
 ##Goals: 1)Create line plots for daily depth data to visualize depth data for end of tag deployment. 2)Filter out any bad data, such as when tag is floating and rerun line plot code.
 
 ###The line plot code is based off of code Bret cooper developed. Follow below steps to run the code:
-####1)Add .R file with code to working directory (depth_plot_good_label_updated.R). 
-####2)Load .R into Rstudio and hit source button on top right or run source("depth_plot_good_label_updated.R")
+####1)Add .R file with code to working directory.
+####2)Load .R into Rstudio and hit source button on top right or run source("Tag depth line plots.R")
 ####3)Create a date/time field with local time based on popoff lat/long. Run interpolation code if any NAs are created at midnight due to formatting (00:00:00). (This should have been done already with time conversion pre-processing.)
 ####4)Run the function in the .R file (brett_depth_plot_good_label() and change inputs. Note if run code in console then will go to plots and can export there otherwise will need to run with ggsave to export.
 
