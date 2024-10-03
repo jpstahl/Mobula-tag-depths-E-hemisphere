@@ -1,5 +1,5 @@
 
-#brett_depth_plot_good_label(Depths_234811, "Etc/GMT+10", "Tag ID 234811",x_label = "Date/time UTC+10")#example of function.
+#brett_depth_plot_good_label_yaxis_812(Depths_234812, "Etc/GMT-12", "Tag ID 234812", x_label = "Date/time (HST + 22 hrs)", ylims = c(1020, 0))
 
 brett_depth_plot_good_label_yaxis_812 <- function(depth_df, Popoff_datetime, 
                                                   Ptt = "Moby the mobula",
@@ -128,8 +128,7 @@ brett_depth_plot_good_label_yaxis_812 <- function(depth_df, Popoff_datetime,
     ggtitle(paste0("", Ptt)) +
     #coord_cartesian(ylim = c(max_depth*1.05, -max_depth*.05), expand = FALSE, clip = "off") + #if remove this line then can use function to set max depth.
     #coord_cartesian(ylim = c(400*1.05, -400*0.05),expand = FALSE, clip = "off") +
-    #coord_cartesian(ylim = c(ylims[1]*1.05, -ylims[1]*.05), expand = FALSE, clip = "off") + #
-    coord_cartesian(expand = FALSE, clip = "off") +
+    coord_cartesian(ylim = c(ylims[1]*1.05, -ylims[1]*.05), expand = FALSE, clip = "off") + 
     theme(plot.title = element_text(hjust = 0.5)) + 
     theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1),
           plot.margin = unit(c(2, 1, b = 4, 1), "lines"),
